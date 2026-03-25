@@ -31,7 +31,7 @@ pub mod traits;
 pub use traits::{Accumulator, Group};
 
 #[cfg(feature = "rsa")]
-pub use rsa_accumulator::RsaAccumulator;
+pub use rsa_accumulator::{GenericAccumulator, RsaAccumulator};
 
 #[cfg(feature = "rsa")]
 pub use groups::rsa_group;

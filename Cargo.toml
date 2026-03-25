@@ -7,6 +7,7 @@ edition = "2021"
 default = ["rsa", "bilinear"]
 rsa = ["num-bigint", "num-traits", "num-integer", "glass_pumpkin"]
 bilinear = ["ark-ec", "ark-ff", "ark-std", "ark-poly", "ark-poly-commit", "ark-bls12-381"]
+class-group = ["class_group", "curv"]
 
 [dependencies]
 rand = "0.8"
@@ -26,6 +27,8 @@ Gen_Prime = "=1.1.9"
 rust-miller-rabin = "0.1.4"
 sha256 = "1.6.0"
 criterion = "0.5"
+class_group = {version = "0.6.1", optional = true}
+curv = { package = "curv-kzen", version = "0.10", default-features = false, optional = true}
 
 [[bench]]
 name = "bench_rsa"
